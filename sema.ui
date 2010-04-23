@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sema</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>551</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QTextBrowser" name="textBrowser"/>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="mainFrame">
+       <item>
+        <widget class="QFrame" name="searchFrame">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="margin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QToolButton" name="searchCloseButton">
+            <property name="text">
+             <string>x</string>
+            </property>
+            <property name="icon">
+             <iconset resource="icons/resources.qrc">
+              <normaloff>:/icons/closetab.png</normaloff>:/icons/closetab.png</iconset>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Find:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="searchText"/>
+          </item>
+          <item>
+           <widget class="QToolButton" name="searchPrevious">
+            <property name="text">
+             <string>&amp;Previous</string>
+            </property>
+            <property name="icon">
+             <iconset resource="icons/resources.qrc">
+              <normaloff>:/icons/previous.png</normaloff>:/icons/previous.png</iconset>
+            </property>
+            <property name="toolButtonStyle">
+             <enum>Qt::ToolButtonTextBesideIcon</enum>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="searchNext">
+            <property name="text">
+             <string>&amp;Next</string>
+            </property>
+            <property name="icon">
+             <iconset resource="icons/resources.qrc">
+              <normaloff>:/icons/next.png</normaloff>:/icons/next.png</iconset>
+            </property>
+            <property name="shortcut">
+             <string>Ctrl+G</string>
+            </property>
+            <property name="toolButtonStyle">
+             <enum>Qt::ToolButtonTextBesideIcon</enum>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="searchCaseSensitive">
+            <property name="text">
+             <string>&amp;Case Sensitive</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="controlFrame">
+         <item>
+          <widget class="QToolButton" name="openFileButton">
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="icons/resources.qrc">
+             <normaloff>:/icons/eject.png</normaloff>:/icons/eject.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="readPauseButton">
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="icons/resources.qrc">
+             <normaloff>:/icons/play.png</normaloff>
+             <normalon>:/icons/pause.png</normalon>:/icons/play.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="previousButton">
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="icons/resources.qrc">
+             <normaloff>:/icons/previous.png</normaloff>:/icons/previous.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="stopButton">
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="icons/resources.qrc">
+             <normaloff>:/icons/stop.png</normaloff>:/icons/stop.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="nextButton">
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="icons/resources.qrc">
+             <normaloff>:/icons/next.png</normaloff>:/icons/next.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSlider" name="horizontalSlider">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen_File"/>
+    <addaction name="actionClose_Window"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <widget class="QMenu" name="menuChange_amplitude">
+     <property name="title">
+      <string>Amplitude</string>
+     </property>
+     <addaction name="actionAmplitude_up"/>
+     <addaction name="actionAmplitude_down"/>
+    </widget>
+    <addaction name="menuChange_amplitude"/>
+    <addaction name="separator"/>
+    <addaction name="actionChange_speed_of_words"/>
+    <addaction name="actionPitch"/>
+    <addaction name="actionChange_voice_type"/>
+    <addaction name="actionChange_language"/>
+    <addaction name="actionPreference_2"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionPreference"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <addaction name="actionStart_Reading"/>
+    <addaction name="actionPause"/>
+    <addaction name="actionStart"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuOptions"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionPreference">
+   <property name="text">
+    <string>Preference</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionOpen_File">
+   <property name="text">
+    <string>&amp;Open File for reading</string>
+   </property>
+  </action>
+  <action name="actionRead_File">
+   <property name="text">
+    <string>&amp;Read/Pause Reading File</string>
+   </property>
+  </action>
+  <action name="actionPause_File">
+   <property name="text">
+    <string>Pause File</string>
+   </property>
+  </action>
+  <action name="actionStop_Reading">
+   <property name="text">
+    <string>&amp;Stop Reading File</string>
+   </property>
+  </action>
+  <action name="actionClose_Window">
+   <property name="text">
+    <string>&amp;Close Window</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>&amp;Exit</string>
+   </property>
+  </action>
+  <action name="actionChange_pitch">
+   <property name="text">
+    <string>Pitch</string>
+   </property>
+  </action>
+  <action name="actionChange_speed_of_words">
+   <property name="text">
+    <string>Speed of words</string>
+   </property>
+  </action>
+  <action name="actionChange_voice_type">
+   <property name="text">
+    <string>Voice type</string>
+   </property>
+  </action>
+  <action name="actionChange_language">
+   <property name="text">
+    <string>Language to Read</string>
+   </property>
+  </action>
+  <action name="actionPreference_2">
+   <property name="text">
+    <string>Preference</string>
+   </property>
+  </action>
+  <action name="actionAmplitude_up">
+   <property name="text">
+    <string>Amplitude up</string>
+   </property>
+  </action>
+  <action name="actionAmplitude_down">
+   <property name="text">
+    <string>Amplitude down</string>
+   </property>
+  </action>
+  <action name="actionPause">
+   <property name="text">
+    <string>Pause Reading</string>
+   </property>
+  </action>
+  <action name="actionStart">
+   <property name="text">
+    <string>Stop Reading</string>
+   </property>
+  </action>
+  <action name="actionStart_Reading">
+   <property name="text">
+    <string>Start Reading</string>
+   </property>
+  </action>
+  <action name="actionPitch">
+   <property name="text">
+    <string>Pitch</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="icons/resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
